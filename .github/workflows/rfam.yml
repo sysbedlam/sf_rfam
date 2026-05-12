@@ -7,16 +7,16 @@ on:
 
 jobs:
   run-query:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Установка ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout repo 
+        uses: actions/checkout@v3 #Клонирование репы
 
       - name: Install MySQL client
-        run: sudo apt-get install -y mysql-client
+        run: sudo apt-get install -y mysql-client #Установка MySQL
 
-      - name: Run SQL query
+      - name: Run SQL query #Подключение к базе и запуск запроса.
         run: |
           mysql \
             --user=rfamro \
